@@ -9,7 +9,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t lloydmatereke/jenkins-poojithasan.'
+
+        sh 'docker build -t poojithasan/jenkins-docker-hub.'
       }
     }
     stage('Login') {
@@ -19,7 +20,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push lloydmatereke/jenkins-poojithasan
+        sh 'docker push poojithasan/jenkins-poojithasan
       }
     }
   }
